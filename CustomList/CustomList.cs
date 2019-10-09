@@ -14,19 +14,23 @@ namespace CustomList
         //constructor
         public CustomList()
         {
-            items = new T[4];
+            items = new T[1];
         }
 
         public int Count
         {
             get
             {
-                foreach(T item in items)
-                {
-                    count++;
-                }
                 return count;
             }
+        }
+        public void IncrementCount()
+        {
+            count++;
+        }
+        public void DecrementCount()
+        {
+            count--;
         }
     }
 }

@@ -21,7 +21,10 @@ namespace CustomList
         {
             get
             {
-                count = items.Length;
+                foreach(T item in items)
+                {
+                    count++;
+                }
                 return count;
             }
         }

@@ -9,5 +9,11 @@ namespace CustomList
     public class CustomList<T>
     {
         private T[] items;
+
+        //constructor
+        public CustomList()
+        {
+            items = new T[4];
+        }
     }
 }

@@ -69,7 +69,6 @@ namespace CustomList
             GrowArray();
             items[count - 1] = item;
             IncrementCount();
-            ResizeArray();
             return items;
         }
         public T[] GrowArray()

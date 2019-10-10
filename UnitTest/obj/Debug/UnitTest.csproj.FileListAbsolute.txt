@@ -1,0 +1,16 @@
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\CustomList.exe
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\CustomList.pdb
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\CustomList.exe.config
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\obj\Debug\UnitTest.csprojAssemblyReference.cache
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\adamn\Documents\devcodecamp\week_05\Projects\CustomList\UnitTest\obj\Debug\UnitTest.pdb

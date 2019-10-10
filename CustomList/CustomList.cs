@@ -64,15 +64,29 @@ namespace CustomList
         {
             count--;
         }
-        public void Add(T item)
+        public T[] Add(T item)
         {
-            //T[] tempArray = new T[1] { item };
-            //items.Concat(tempArray);
+            GrowArray();
             IncrementCount();
+            return items;
         }
-        public void GrowArray()
+        public T[] GrowArray()
         {
+            int doubleSize = Capacity * 2;
+            T[] tempArray = new T[doubleSize];
+            CopyArray(tempArray);
+            return items;
 
+        }
+        public T[] CopyArray(T[] tempArray)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                tempArray[i] = items[i];
+                IncrementCount();
+            }
+            items = tempArray;
+            return items;
         }
     }
 }

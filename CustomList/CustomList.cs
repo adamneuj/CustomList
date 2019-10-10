@@ -90,18 +90,18 @@ namespace CustomList
             items = tempArray;
             return items;
         }
-        public T[] ResizeArray()
-        {
-            if(Count != Capacity)
-            {
-                T[] tempArray = new T[count];
-                CopyArray(tempArray);
-                return items;
-            }
-            else
-            {
-                return items;
-            }
+        //public T[] ResizeArray()
+        //{
+        //    if(Count != Capacity)
+        //    {
+        //        T[] tempArray = new T[count];
+        //        CopyArray(tempArray);
+        //        return items;
+        //    }
+        //    else
+        //    {
+        //        return items;
+        //    }
         }
     }
 }

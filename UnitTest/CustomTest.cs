@@ -80,12 +80,13 @@ namespace UnitTest
         {
             // arrange
             CustomList<int> testList = new CustomList<int>();
-            int expected = 2;
+            int expected = 3;
             int actual;
 
             // act
             testList.Add(12);
             testList.Add(24);
+            testList.Add(36);
             actual = testList.Count;
 
             // assert

@@ -56,14 +56,6 @@ namespace CustomList
                 }
             }
         }
-        public void IncrementCount()
-        {
-            count++;
-        }
-        public void DecrementCount()
-        {
-            count--;
-        }
         public T[] Add(T item)
         {
             if(Count == Capacity)
@@ -96,6 +88,14 @@ namespace CustomList
             }
             items = tempArray;
             return items;
+        }
+        public void IncrementCount()
+        {
+            count++;
+        }
+        public void DecrementCount()
+        {
+            count--;
         }
     }
 }

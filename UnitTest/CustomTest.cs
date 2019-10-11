@@ -8,6 +8,38 @@ namespace UnitTest
     public class CustomTest
     {
         [TestMethod]
+        public void IncrementCount_AddItemToList_CountIsOne()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            testList.Add(12);
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void IncrementCount_AddItemToList_CountIsThree()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            testList.Add(12);
+            testList.Add(24);
+            testList.Add(36);
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
         public void Add_AddToEmptyList_ItemGoesToIndexZero()
         {
             // arrange
@@ -70,24 +102,6 @@ namespace UnitTest
             testList.Add(34);
             testList.Add(36);
             actual = testList.Capacity;
-
-            // assert
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void Add_AddItemToList_CountIncrements()
-        {
-            // arrange
-            CustomList<int> testList = new CustomList<int>();
-            int expected = 3;
-            int actual;
-
-            // act
-            testList.Add(12);
-            testList.Add(24);
-            testList.Add(36);
-            actual = testList.Count;
 
             // assert
             Assert.AreEqual(expected, actual);

@@ -11,6 +11,7 @@ namespace CustomList
         private T[] items;
         private int count;
         private int capacity;
+        private string stringList;
 
         //constructor
         public CustomList()
@@ -115,6 +116,15 @@ namespace CustomList
             }
             items = tempArray;
             return items;
+        }
+        public override string ToString()
+        {
+            string value;
+            for(int i = 0; i < Count - 1; i++)
+            {
+                
+            }
+            return stringList;
         }
     }
 }

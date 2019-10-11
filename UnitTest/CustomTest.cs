@@ -197,5 +197,23 @@ namespace UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_RemoveFirstTwelve_ItemCountIsTwo()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            testList.Add(12);
+            testList.Add(12);
+            testList.Add(24);
+            testList.Remove(12);
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

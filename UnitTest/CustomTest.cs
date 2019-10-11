@@ -412,5 +412,120 @@ namespace UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void MinusOperator_RemoveItemsToCreateNewList_CountIsTwo()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(3);
+            testList1.Add(2);
+            testList2.Add(2);
+            testList2.Add(1);
+            testList2.Add(6);
+            newList = testList1 - testList2;
+            actual = newList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MinusOperator_RemoveItemsToCreateNewList_IndexZeroIsThree()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(3);
+            testList1.Add(2);
+            testList2.Add(2);
+            testList2.Add(1);
+            testList2.Add(6);
+            newList = testList1 - testList2;
+            actual = newList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MinusOperator_RemoveItemsToCreateNewList_IndexOneIsSix()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(3);
+            testList1.Add(2);
+            testList2.Add(2);
+            testList2.Add(1);
+            testList2.Add(6);
+            newList = testList1 - testList2;
+            actual = newList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MinusOperator_RemoveItemsToCreateNewList_IndexZeroIsSix()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            testList1.Add(6);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(8);
+            testList2.Add(3);
+            testList2.Add(4);
+            newList = testList1 - testList2;
+            actual = newList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MinusOperator_RemoveItemsToCreateNewList_IndexOneIsThree()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            testList1.Add(6);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(8);
+            testList2.Add(3);
+            testList2.Add(4);
+            newList = testList1 - testList2;
+            actual = newList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

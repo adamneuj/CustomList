@@ -66,42 +66,36 @@ namespace CustomList
         }
         public T[] Add(T item)
         {
-            GrowArray();
-            items[count - 1] = item;
-            IncrementCount();
-            return items;
+            if(Count == Capacity)
+            {
+                GrowArray();
+                items[count] = item;
+                IncrementCount();
+                return items;
+            }
+            else
+            {
+                items[count] = item;
+                IncrementCount();
+                return items;
+            }
         }
         public T[] GrowArray()
         {
-            int size = Capacity * 2;
-            T[] tempArray = new T[size];
+            int newSize = Capacity * 2;
+            T[] tempArray = new T[newSize];
             CopyArray(tempArray);
             return items;
 
         }
         public T[] CopyArray(T[] tempArray)
         {
-            count = 0;
             for (int i = 0; i < items.Length; i++)
             {
                 tempArray[i] = items[i];
-                IncrementCount();
             }
             items = tempArray;
             return items;
-        }
-        //public T[] ResizeArray()
-        //{
-        //    if(Count != Capacity)
-        //    {
-        //        T[] tempArray = new T[count];
-        //        CopyArray(tempArray);
-        //        return items;
-        //    }
-        //    else
-        //    {
-        //        return items;
-        //    }
         }
     }
 }

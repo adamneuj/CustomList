@@ -17,7 +17,14 @@ namespace CustomList
         {
             items = new T[1];
         }
-
+        public void IncrementCount()
+        {
+            count++;
+        }
+        public void DecrementCount()
+        {
+            count--;
+        }
         public int Count
         {
             get
@@ -72,13 +79,33 @@ namespace CustomList
                 return items;
             }
         }
+        public T[] Remove(T item)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                if (items[i].Equals(item))
+                {
+                    DecrementCount();
+                    for(int x = i; x < Count; x++)
+                    {
+                        items[x] = items[x + 1];
+                    }
+                    return items;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return items;
+        }
+
         public T[] GrowArray()
         {
             int newSize = Capacity * 2;
             T[] tempArray = new T[newSize];
             CopyArray(tempArray);
             return items;
-
         }
         public T[] CopyArray(T[] tempArray)
         {
@@ -88,14 +115,6 @@ namespace CustomList
             }
             items = tempArray;
             return items;
-        }
-        public void IncrementCount()
-        {
-            count++;
-        }
-        public void DecrementCount()
-        {
-            count--;
         }
     }
 }

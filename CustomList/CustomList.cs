@@ -119,12 +119,12 @@ namespace CustomList
         }
         public override string ToString()
         {
-            string value;
-            for(int i = 0; i < Count - 1; i++)
+            string temp = "";
+            for(int i = 0; i < Count; i++)
             {
-                
+                temp += items[i].ToString();
             }
-            return stringList;
+            return temp;
         }
     }
 }

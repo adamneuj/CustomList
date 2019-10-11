@@ -215,5 +215,41 @@ namespace UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ToString_ConcatenateInt_12345()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            string expected = "12345";
+            string actual;
+
+            // act
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            testList.Add(4);
+            testList.Add(5);
+            actual = testList.ToString();
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_ConcatenateInt_godoggo()
+        {
+            // arrange
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "godoggo";
+            string actual;
+
+            // act
+            testList.Add("go");
+            testList.Add("dog");
+            testList.Add("go");
+            actual = testList.ToString();
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

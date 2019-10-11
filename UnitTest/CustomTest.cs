@@ -40,22 +40,57 @@ namespace UnitTest
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestMethod]
-        //public void Add_AddItemToList_CountIncrements()
-        //{
-        //    // arrange
-        //    CustomList<int> testList = new CustomList<int>();
-        //    int expected = 2;
-        //    int actual;
+        [TestMethod]
+        public void Add_AddItemToList_ItemGoesToIndexTwo()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 36;
+            int actual;
 
-        //    // act
-        //    testList.Add(12);
-        //    testList.Add(24);
-        //    actual = testList.Count;
+            // act
+            testList.Add(12);
+            testList.Add(24);
+            testList.Add(36);
+            actual = testList[2];
 
-        //    // assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Add_AddItemToList_LengthOfArrayGrows()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 4;
+            int actual;
+
+            // act
+            testList.Add(12);
+            testList.Add(34);
+            testList.Add(36);
+            actual = testList.Capacity;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Add_AddItemToList_CountIncrements()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            testList.Add(12);
+            testList.Add(24);
+            actual = testList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
 
         //[TestMethod]
         //public void Remove_RemoveItemFromList_ItemGoestoIndexZero()

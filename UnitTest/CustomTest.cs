@@ -251,5 +251,166 @@ namespace UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_CountIsSix()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            testList1.Add(3);
+            testList1.Add(2);
+            testList1.Add(1);
+            testList2.Add(4);
+            testList2.Add(6);
+            testList2.Add(5);
+            concatList = testList1 + testList2;
+            actual = concatList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexZeroIsOne()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexOneIsTwo()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexTwoIsThree()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[2];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexThreeIsFour()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 4;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[3];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexFourIsFive()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 5;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[4];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOperator_ConcatenateCustomList_IndexFiveIsSix()
+        {
+            // arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            CustomList<int> concatList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            testList1.Add(1);
+            testList1.Add(2);
+            testList1.Add(3);
+            testList2.Add(4);
+            testList2.Add(5);
+            testList2.Add(6);
+            concatList = testList1 + testList2;
+            actual = concatList[5];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

@@ -11,7 +11,6 @@ namespace CustomList
         private T[] items;
         private int count;
         private int capacity;
-        private string stringList;
 
         //constructor
         public CustomList()
@@ -126,5 +125,19 @@ namespace CustomList
             }
             return temp;
         }
+        public static CustomList<T> operator + (CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> concatList = new CustomList<T>();
+            for(int i = 0; i < list1.Count; i++)
+            {
+                concatList.Add(list1[i]);
+            }
+            for (int i = 0; i < list2.Count; i++)
+            {
+                concatList.Add(list2[i]);
+            }
+            return concatList;
+        }
+
     }
 }

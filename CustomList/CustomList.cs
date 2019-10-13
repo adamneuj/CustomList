@@ -164,5 +164,15 @@ namespace CustomList
             return newList;
         }
 
+        public CustomList<T> Zip(CustomList<T> list)
+        {
+            CustomList<T> tempList = new CustomList<T>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                tempList.Add(items[i]);
+                tempList.Add(list[i]);
+            }
+            return tempList;
+        }
     }
 }

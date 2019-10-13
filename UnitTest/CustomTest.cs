@@ -235,7 +235,7 @@ namespace UnitTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void ToString_ConcatenateInt_godoggo()
+        public void ToString_ConcatenateString_godoggo()
         {
             // arrange
             CustomList<string> testList = new CustomList<string>();
@@ -246,6 +246,25 @@ namespace UnitTest
             testList.Add("go");
             testList.Add("dog");
             testList.Add("go");
+            actual = testList.ToString();
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_ConcatenateString_godoggocatdog()
+        {
+            // arrange
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "godoggocatdog";
+            string actual;
+
+            // act
+            testList.Add("go");
+            testList.Add("dog");
+            testList.Add("go");
+            testList.Add("cat");
+            testList.Add("dog");
             actual = testList.ToString();
 
             // assert
@@ -523,6 +542,167 @@ namespace UnitTest
             testList2.Add(4);
             newList = testList1 - testList2;
             actual = newList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_CountIsSix()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexZeroIsOne()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[0];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexOneIsTwo()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexTwoIsThree()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[2];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexThreeIsFour()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 4;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[3];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexFourIsFive()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 5;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[4];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipFunction_ZipsTwoCustomListsTogether_IndexFiveIsSix()
+        {
+            // arrange
+            CustomList<int> odd = new CustomList<int>();
+            CustomList<int> even = new CustomList<int>();
+            CustomList<int> newList = new CustomList<int>();
+            int expected = 6;
+            int actual;
+
+            // act
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            newList = odd.Zip(even);
+            actual = newList[5];
 
             // assert
             Assert.AreEqual(expected, actual);

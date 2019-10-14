@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustomList<T>: IEnumerable
     {
         private T[] items;
         private int count;
@@ -163,7 +164,6 @@ namespace CustomList
             newList = list1 + list2;
             return newList;
         }
-
         public CustomList<T> Zip(CustomList<T> list)
         {
             CustomList<T> tempList = new CustomList<T>();
@@ -173,6 +173,13 @@ namespace CustomList
                     tempList.Add(list[i]);
             }
             return tempList;
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                yield return items[i];
+            }
         }
     }
 }
